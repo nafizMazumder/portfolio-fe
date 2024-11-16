@@ -9,7 +9,6 @@ const Contact = () => {
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
-    console.log("API URL:", process.env.REACT_APP_API_URL);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -17,9 +16,6 @@ const Contact = () => {
         try {
             //const res = await axios.post(`${process.env.REACT_APP_API_URL}/contact`, formData);
             const res = await axios.post(`${process.env.REACT_APP_API_URL}/contact`, formData);
-
-            //const res = await axios.post(`https://be-nafizmazumder.netlify.app/.netlify/functions/contact`, formData);
-
             setResponseMessage(res.data.message);
         } catch (error) {
             console.error(error);
