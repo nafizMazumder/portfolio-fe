@@ -15,7 +15,9 @@ const Contact = () => {
         setLoading(true);
         try {
             //const res = await axios.post(`${process.env.REACT_APP_API_URL}/contact`, formData);
-            const res = await axios.post(`https://be-nafizmazumder.netlify.app/.netlify/functions/contact`, formData);
+            const res = await axios.post(`${process.env.REACT_APP_API_URL}/contact`, formData);
+
+            //const res = await axios.post(`https://be-nafizmazumder.netlify.app/.netlify/functions/contact`, formData);
 
             setResponseMessage(res.data.message);
         } catch (error) {
