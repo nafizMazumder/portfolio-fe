@@ -9,6 +9,7 @@ const Contact = () => {
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
+    console.log("API URL:", process.env.REACT_APP_API_URL);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
