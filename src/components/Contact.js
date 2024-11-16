@@ -4,6 +4,7 @@ import axios from 'axios';
 const Contact = () => {
     const [formData, setFormData] = useState({ name: '', email: '', message: '' });
     const [responseMessage, setResponseMessage] = useState('');
+    const [loading, setLoading] = useState(false);
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -11,11 +12,15 @@ const Contact = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        setLoading(true);
         try {
-            const res = await axios.post('http://localhost:5000/api/contact', formData);
+            const res = await axios.post(`${process.env.REACT_APP_API_URL}/api/contact`, formData);
             setResponseMessage(res.data.message);
         } catch (error) {
+            console.error(error);
             setResponseMessage('An error occurred while sending the message.');
+        } finally {
+            setLoading(false);
         }
     };
 
@@ -26,9 +31,11 @@ const Contact = () => {
                 <input type="text" name="name" placeholder="Name" onChange={handleChange} required />
                 <input type="email" name="email" placeholder="Email" onChange={handleChange} required />
                 <textarea name="message" placeholder="Message" onChange={handleChange} required></textarea>
-                <button type="submit">Send</button>
+                <button type="submit" disabled={loading}>
+                    {loading ? 'Sending...' : 'Send'}
+                </button>
             </form>
-            <p>{responseMessage}</p>
+            {responseMessage && <p>{responseMessage}</p>}
         </section>
     );
 };
