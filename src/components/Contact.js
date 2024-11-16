@@ -14,7 +14,7 @@ const Contact = () => {
         e.preventDefault();
         setLoading(true);
         try {
-            const res = await axios.post(`${process.env.REACT_APP_API_URL}/api/contact`, formData);
+            const res = await axios.post(`${process.env.REACT_APP_API_URL}/.netlify/functions/contact`, formData);
             setResponseMessage(res.data.message);
         } catch (error) {
             console.error(error);
