@@ -28,13 +28,23 @@ const Footer = () => {
 
     return (
         <footer>
-            <p>&copy; {currentYear} Nafiz Mazumder</p>
+            <p>&copy; {currentYear} Nafiz Mazumder.
+                <a href="https://www.flaticon.com/free-icons/developer"
+                   title="Favicon"
+                   target="_blank" rel="noopener noreferrer"> Favicon created by Pixel perfect - Flaticon.
+                </a>
+            </p>
             <ul>
-                <li><a href="https://www.linkedin.com/in/nafiz-mazumder" target="_blank"
+                <li><a href="https://www.linkedin.com/in/nafiz-mazumder"
+                       title="LinkedIn"
+                       target="_blank"
                        rel="noopener noreferrer"><FaLinkedin/></a></li>
-                <li><a href="https://github.com/nafizMazumder" target="_blank" rel="noopener noreferrer"><FaGithub/></a></li>
+                <li><a href="https://github.com/nafizMazumder"
+                       title="GitHub"
+                       target="_blank" rel="noopener noreferrer"><FaGithub/></a>
+                </li>
             </ul>
-            <button onClick={scrollToTop} className="scroll-to-top">
+            <button onClick={scrollToTop} title="Scroll to top" className="scroll-to-top">
                 <FaArrowUp className="scroll-to-top-icon"/>
             </button>
         </footer>
