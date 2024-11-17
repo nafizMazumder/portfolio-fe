@@ -45,17 +45,18 @@ nav a:hover {
 
 /* Main content styles */
 main {
-    padding: 20px;
     max-width: 800px;
     margin: auto;
-    background: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background: #f4f4f4;
 }
 
 /* Section styles */
 section {
     margin: 20px 0;
+    padding: 20px 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
@@ -83,9 +84,20 @@ input, textarea {
     margin: 5px 0;
     border: 1px solid #ddd;
     border-radius: 4px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+}
+
+/* Placeholder styles */
+input::placeholder,
+textarea::placeholder {
+    font-size: 14px;
+    color: #aaa;
+    font-family: Arial, sans-serif;
 }
 
 button {
+    margin-top: 5px;
     padding: 10px;
     border: none;
     background: #00171f;
