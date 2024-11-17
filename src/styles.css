@@ -26,6 +26,7 @@ header {
 h1 a{
     color: #ffffff;
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 h1 a:hover {
@@ -37,6 +38,7 @@ nav a {
     text-decoration: none;
     margin: 0 15px;
     font-weight: bold;
+    transition: color 0.3s ease;
 }
 
 nav a:hover {
@@ -67,6 +69,7 @@ h2 {
 p a {
     text-decoration: none;
     color: #003459;
+    transition: color 0.3s ease;
 }
 
 p a:hover {
@@ -105,17 +108,76 @@ button {
     font-weight: bold;
     cursor: pointer;
     border-radius: 4px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
     background: #00a8e8;
 }
 
-/* Footer styles */
+/* Footer Styles */
 footer {
     text-align: center;
-    padding: 20px 0;
-    background: #00171f;
+    padding: 20px;
+    background-color: #00171f;
     color: #ffffff;
     margin-top: 20px;
+}
+
+footer p {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+footer ul li a {
+    color: #ffffff;
+    font-size: 36px;
+    transition: color 0.3s ease;
+}
+
+footer ul li a:hover {
+    color: #00a8e8;
+}
+
+/* Scroll to Top Button Styles */
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #00171f;
+    color: white;
+    padding: 10px;
+    border: 1px solid white;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+    display: none; /* Initially hidden */
+    opacity: 0.3;
+    transition: background-color 0.3s ease;
+}
+
+.scroll-to-top:hover {
+    opacity: 1;
+    background-color: #00a8e8;
+    border: 1px solid #00a8e8;
+}
+
+.scroll-to-top-icon {
+    font-size: 12px; /* Default size */
+}
+
+/* Show the button when scrolled down */
+body.scrolled .scroll-to-top {
+    display: block;
 }
