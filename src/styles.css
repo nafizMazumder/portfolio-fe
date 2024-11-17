@@ -94,13 +94,21 @@ input, textarea {
 /* Placeholder styles */
 input::placeholder,
 textarea::placeholder {
-    font-size: 14px;
-    color: #aaa;
+    font-size: 16px;
+    color: #bbb;
     font-family: Arial, sans-serif;
 }
 
+/* Disabled input and textarea fields */
+input:disabled, textarea:disabled {
+    background-color: #e0e0e0;
+    border-color: #ccc;
+    color: #888;
+    cursor: not-allowed;
+}
+
 button {
-    margin-top: 5px;
+    margin: 5px 0;
     padding: 10px;
     border: none;
     background: #00171f;
@@ -108,13 +116,28 @@ button {
     font-weight: bold;
     cursor: pointer;
     border-radius: 4px;
-    font-size: 14px;
+    font-size: 16px;
     font-family: Arial, sans-serif;
     transition: background-color 0.3s ease;
 }
 
 button:hover {
     background: #00a8e8;
+}
+
+/* Disabled button styles */
+button:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+button:disabled:hover {
+    background: #bbb;
+    transition: background-color 0.3s ease;
+}
+
+#responseMessage {
+    margin-top: 10px;
 }
 
 /* Footer Styles */
@@ -128,7 +151,7 @@ footer {
 
 footer p {
     margin-bottom: 10px;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 footer ul {
@@ -153,7 +176,7 @@ footer ul li a:hover {
 /* Scroll to Top Button Styles */
 .scroll-to-top {
     position: fixed;
-    bottom: 20px;
+    bottom: 32px;
     right: 20px;
     background: #00171f;
     color: white;
@@ -161,9 +184,9 @@ footer ul li a:hover {
     border: 1px solid white;
     cursor: pointer;
     border-radius: 4px;
-    font-size: 14px;
-    display: none; /* Initially hidden */
-    opacity: 0.3;
+    font-size: 16px;
+    display: none;
+    opacity: 0.6;
     transition: background-color 0.3s ease;
 }
 
@@ -174,7 +197,7 @@ footer ul li a:hover {
 }
 
 .scroll-to-top-icon {
-    font-size: 12px; /* Default size */
+    font-size: 12px;
 }
 
 /* Show the button when scrolled down */
