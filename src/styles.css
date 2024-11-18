@@ -170,7 +170,6 @@ footer {
 }
 
 footer p {
-    margin-bottom: 10px;
     font-size: 16px;
 }
 
@@ -214,19 +213,19 @@ footer ul li a:hover {
     cursor: pointer;
     border-radius: 4px;
     display: none;
-    opacity: 0.6;
-    border: 1px solid white;
+    border: 3px solid rgba(255, 255, 255, 0.9);
+
     transition: background-color 0.3s ease;
 }
 
 .scroll-to-top:hover {
     opacity: 1;
     background-color: #00AFE8;
-    border: 1px solid #00AFE8;
+    border: 3px solid #00AFE8;
 }
 
 .scroll-to-top-icon {
-    font-size: 12px;
+    font-size: 15px;
 }
 
 /* Show the button when scrolled down */

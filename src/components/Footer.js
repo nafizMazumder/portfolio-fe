@@ -28,7 +28,10 @@ const Footer = () => {
 
     return (
         <footer>
-            <p>&copy; {currentYear} Nafiz Mazumder.
+            <p>
+                &copy; {currentYear} Nafiz Mazumder. Built with React, Node.js, and Express.
+            </p>
+            <p>
                 <a href="https://www.flaticon.com/free-icon/developer_2572713?related_id=2572711&origin=search"
                    title="Favicon"
                    target="_blank" rel="noopener noreferrer"> Favicon by Pixel perfect - Flaticon.
