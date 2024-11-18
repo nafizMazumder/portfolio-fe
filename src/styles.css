@@ -12,7 +12,7 @@ html, body {
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: Oxanium, sans-serif;
     line-height: 1.6;
     background-image: url('/public/assets/background.jpg');
     background-size: cover;
@@ -33,6 +33,7 @@ header {
 }
 
 h1 a {
+    font-family: Audiowide, sans-serif;
     color: white;
     text-decoration: none;
     transition: color 0.3s ease;
@@ -72,9 +73,12 @@ section {
 }
 
 h2 {
-    color: #00AFE8;
+    color: #00AFE8; /* Text color */
     margin-bottom: 10px;
-    text-shadow: -1px -1px 0 #02001A; /* Top-left */
+    text-shadow:
+            -1px -1px 0 #02001A, /* Top-left */
+            0 -1px 0 #02001A, /* Top */
+            -1px 0 0 #02001A; /* Left */
 }
 
 p a {
@@ -96,10 +100,10 @@ form {
 input, textarea {
     padding: 10px;
     margin: 5px 0;
-    border: 1px solid #ddd;
+    border: 1px solid #bbb;
     border-radius: 4px;
     font-size: 14px;
-    font-family: Arial, sans-serif;
+    font-family: Oxanium, sans-serif;
 }
 
 /* Placeholder styles */
@@ -107,7 +111,7 @@ input::placeholder,
 textarea::placeholder {
     font-size: 16px;
     color: #bbb;
-    font-family: Arial, sans-serif;
+    font-family: Oxanium, sans-serif;
 }
 
 /* Disabled input and textarea fields */
@@ -128,12 +132,17 @@ button {
     cursor: pointer;
     border-radius: 4px;
     font-size: 16px;
-    font-family: Arial, sans-serif;
+    font-family: Oxanium, sans-serif;
     transition: background-color 0.3s ease;
 }
 
 button:hover {
     background: #00AFE8;
+    text-shadow:
+            -1px -1px 0 #02001A, /* Top-left */
+            0 -1px 0 #02001A, /* Top */
+            -1px 0 0 #02001A; /* Left */
+    transition: text-shadow 0.3s ease;
 }
 
 /* Disabled button styles */
@@ -206,12 +215,14 @@ footer ul li a:hover {
     border-radius: 4px;
     display: none;
     opacity: 0.6;
+    border: 1px solid white;
     transition: background-color 0.3s ease;
 }
 
 .scroll-to-top:hover {
     opacity: 1;
     background-color: #00AFE8;
+    border: 1px solid #00AFE8;
 }
 
 .scroll-to-top-icon {
